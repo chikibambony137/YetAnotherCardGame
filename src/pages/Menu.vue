@@ -48,6 +48,8 @@ import Nav from '../components/blocks/menu/Nav.vue';
 .menu__view {
     display: flex;
     flex-grow: 1;
+    justify-content: center;
+    align-items: center;
 
     border-radius: 20px;
 
