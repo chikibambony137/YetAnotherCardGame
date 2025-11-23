@@ -49,8 +49,10 @@ import Nav from '../components/blocks/menu/Nav.vue';
     display: flex;
     flex-grow: 1;
     justify-content: center;
-    align-items: center;
+    align-items: start;
 
+    max-width: 600px;
+    max-height: 520px;
     border-radius: 20px;
 
     background-color: var.$block-background-color;

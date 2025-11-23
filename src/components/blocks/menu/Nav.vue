@@ -3,8 +3,8 @@
     <div class="nav__layout">
       <div
         class="nav__bttn"
-        :class="{ nav__bttn_active: isDeckActive }"
-        @click="goTo('/deck')">
+        :class="{ nav__bttn_active: isCardsActive }"
+        @click="goTo('/cards')">
         <img class="nav__img" src="../../../assets/icons/menu/deck.svg" alt="deck.svg" draggable="false">
       </div>
 
@@ -26,31 +26,31 @@
 </template>
 
 <script setup>
-import { ref, watch, onMounted } from "vue";
+import { ref, onMounted } from "vue";
 import { useRouter } from "vue-router";
 
-const isDeckActive = ref(false);
+const isCardsActive = ref(false);
 const isPlayActive = ref(true);
 const isShopActive = ref(false);
 
 const styleButton = (route) => {
   switch (route) {
-    case "/deck": {
-      isDeckActive.value = true;
+    case "/cards": {
+      isCardsActive.value = true;
       isPlayActive.value = false;
       isShopActive.value = false;
       break;
     }
     case "/": {
       isPlayActive.value = true;
-      isDeckActive.value = false;
+      isCardsActive.value = false;
       isShopActive.value = false;
       break;
     }
     case "/shop": {
       isShopActive.value = true;
       isPlayActive.value = false;
-      isDeckActive.value = false;
+      isCardsActive.value = false;
       break;
     }
   }
