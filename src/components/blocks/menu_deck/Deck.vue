@@ -2,10 +2,10 @@
   <div class="deck">
     <h2 class="deck__title">Deck</h2>
     <div class="deck__table">
+        <!-- <Card class="deck__card"></Card>
         <Card class="deck__card"></Card>
         <Card class="deck__card"></Card>
-        <Card class="deck__card"></Card>
-        <Card class="deck__card"></Card>
+        <Card class="deck__card"></Card> -->
     </div>
   </div>
 </template>

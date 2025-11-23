@@ -8,7 +8,7 @@ export default defineConfig({
 
   resolve: {
     alias: {
-      // Создаем алиас для папки public
+      // Создаем алиас для папки src
       // чтобы мы могли использовать абсолютные пути в нашем коде
       '@': path.resolve(__dirname, './src'),
     },
