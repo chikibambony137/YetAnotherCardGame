@@ -82,7 +82,8 @@ onMounted(() => {
 
 .nav__layout {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 20px;
   overflow: visible;
 
   width: 100%;

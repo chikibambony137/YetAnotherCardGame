@@ -59,7 +59,5 @@ import Nav from '../components/blocks/menu/Nav.vue';
 .menu__nav {
     width: 100%;
     height: 80px;
-
-    
 }
 </style>
