@@ -6,8 +6,8 @@
   </template>
   
   <script setup>
-  import Deck from '../../components/blocks/menu_deck/Deck.vue';
-  import Collection from '../../components/blocks/menu_deck/Collection.vue';
+  import Deck from '@/components/blocks/menu_deck/Deck.vue';
+  import Collection from '@/components/blocks/menu_deck/Collection.vue';
   </script>
   
   <style scoped lang="scss">

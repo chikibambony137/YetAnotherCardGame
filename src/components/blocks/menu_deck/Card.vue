@@ -2,7 +2,7 @@
   <div class="card" :class="{'card_choosed': isChoosed}" @click="isChoosed = !isChoosed">
     
     <div class="card__cover">
-        <img class="card__img" src="../../../assets/content/card/fireball.png" alt="fireball.png" draggable="false">
+        <img class="card__img" src="@/assets/content/card/fireball.png" alt="fireball.png" draggable="false">
     </div>
 
     <div class="card__buttons" v-show="isChoosed">
@@ -20,7 +20,7 @@ const isChoosed = ref(false);
 </script>
 
 <style scoped lang="scss">
-@use '../../../assets/scss/var.scss';
+@use '@/assets/scss/var.scss';
 
 .card {
     display: flex;

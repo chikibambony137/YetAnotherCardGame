@@ -17,12 +17,12 @@
 </template>
 
 <script setup>
-import PlayerInfo from '../components/blocks/menu/PlayerInfo.vue';
-import Nav from '../components/blocks/menu/Nav.vue';
+import PlayerInfo from '@/components/blocks/menu/PlayerInfo.vue';
+import Nav from '@/components/blocks/menu/Nav.vue';
 </script>
 
 <style lang="scss" scoped>
-@use '../assets/scss/var.scss';
+@use '@/assets/scss/var.scss';
 
 .menu {
     display: flex;

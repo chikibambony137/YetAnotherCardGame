@@ -15,7 +15,7 @@ import Card from './Card.vue';
 </script>
 
 <style scoped lang="scss">
-@use '../../../assets/scss/var.scss';
+@use '@/assets/scss/var.scss';
 
 .deck {
     display: flex;

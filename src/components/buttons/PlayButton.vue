@@ -9,7 +9,7 @@
 </script>
 
 <style lang="scss" scoped>
-@use '../../assets/scss/var.scss';
+@use '@/assets/scss/var.scss';
 
 .play-button {
     width: 100%;

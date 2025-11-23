@@ -5,7 +5,7 @@
     <div class="play__boss boss">
       <img
         class="boss__img"
-        src="../../assets/content/boss/GoblinKing.png"
+        src="@/assets/content/boss/GoblinKing.png"
         alt="GoblinKing.png" />
       <h2 class="boss__name">Goblin King</h2>
     </div>
@@ -15,11 +15,11 @@
 </template>
 
 <script setup>
-import PlayButton from "../../components/buttons/PlayButton.vue";
+import PlayButton from "@/components/buttons/PlayButton.vue";
 </script>
 
 <style scoped lang="scss">
-@use "../../assets/scss/var.scss";
+@use "@/assets/scss/var.scss";
 
 h2 {
   margin: 10px;

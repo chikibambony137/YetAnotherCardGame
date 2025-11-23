@@ -28,7 +28,7 @@
   </script>
   
   <style scoped lang="scss">
-  @use '../../../assets/scss/var.scss';
+  @use '@/assets/scss/var.scss';
   
   .collection {
       display: flex;

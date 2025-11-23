@@ -11,7 +11,7 @@
 <script setup></script>
 
 <style lang="scss" scoped>
-@use '../../../assets/scss/var.scss';
+@use '@/assets/scss/var.scss';
 
 .player-info {
   display: flex;

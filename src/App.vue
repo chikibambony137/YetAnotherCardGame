@@ -11,7 +11,7 @@ import Menu from './pages/Menu.vue';
 </script>
 
 <style scoped lang="scss">
-@use './assets/scss/var.scss';
+@use '@/assets/scss/var.scss';
 
 .app {
   margin: 0;

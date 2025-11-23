@@ -5,7 +5,7 @@
         class="nav__bttn"
         :class="{ nav__bttn_active: isCardsActive }"
         @click="goTo('/cards')">
-        <img class="nav__img" src="../../../assets/icons/menu/deck.svg" alt="deck.svg" draggable="false">
+        <img class="nav__img" src="@/assets/icons/menu/deck.svg" alt="deck.svg" draggable="false">
       </div>
 
       <div
@@ -19,7 +19,7 @@
         class="nav__bttn"
         :class="{ nav__bttn_active: isShopActive }"
         @click="goTo('/shop')">
-        <img class="nav__img" src="../../../assets/icons/menu/shop.svg" alt="shop.svg" draggable="false">
+        <img class="nav__img" src="@/assets/icons/menu/shop.svg" alt="shop.svg" draggable="false">
       </div>
     </div>
   </div>
@@ -70,7 +70,7 @@ onMounted(() => {
 </script>
 
 <style lang="scss" scoped>
-@use "../../../assets/scss/var.scss";
+@use "@/assets/scss/var.scss";
 
 .nav {
   display: flex;
