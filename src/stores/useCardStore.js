@@ -7,7 +7,7 @@ export const useCardStore = defineStore('cards', () => {
             id: 0,
             name: "Fireball",
             info: "fire and ball - FIREBALL!!",
-            image: "../../../assets/content/card/Fireball.png",
+            image: "card/Fireball.png",
             features: {
                 cost: 3,
                 damage: 5,
@@ -18,7 +18,7 @@ export const useCardStore = defineStore('cards', () => {
             id: 1,
             name: "Heal",
             info: "heal my ebalo",
-            image: "@/assets/content/card/Heal.png",
+            image: "card/Heal.png",
             features: {
                 cost: 2,
                 heal: 3,
@@ -29,7 +29,7 @@ export const useCardStore = defineStore('cards', () => {
             id: 2,
             name: "Lightning",
             info: "Power off!",
-            image: "@/assets/content/card/Lightning.png",
+            image: "card/Lightning.png",
             features: {
                 cost: 7,
                 damage: 10,
@@ -40,7 +40,7 @@ export const useCardStore = defineStore('cards', () => {
             id: 3,
             name: "Shield",
             info: "Shield for ass, use correctly!",
-            image: "@/assets/content/card/Shield.png",
+            image: "card/Shield.png",
             features: {
                 cost: 5,
                 shield: 50,

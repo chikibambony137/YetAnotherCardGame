@@ -2,7 +2,7 @@
   <div class="card" :class="{'card_choosed': isChoosed}" @click="isChoosed = !isChoosed">
     
     <div class="card__cover">
-        <img class="card__img" src="@/assets/content/card/Fireball.png" :alt="card.name" draggable="false">
+        <img class="card__img" :src=cardImgSrc :alt="card.name" draggable="false">
     </div>
 
     <div class="card__buttons" v-show="isChoosed">
@@ -19,6 +19,7 @@ import { ref, computed } from 'vue';
 const isChoosed = ref(false);
 
 const { card } = defineProps({card: Object});
+const cardImgSrc = card.image;
 
 </script>
 
@@ -37,6 +38,7 @@ const { card } = defineProps({card: Object});
 
     box-sizing: border-box;
     border-radius: 20px;
+    
     background-color: transparent;
     z-index: 1;
 }
@@ -64,6 +66,8 @@ const { card } = defineProps({card: Object});
 .card__img {
     width: 100%;
     height: 100%;
+
+    border-radius: 20px;
 }
 
 .card__buttons {
