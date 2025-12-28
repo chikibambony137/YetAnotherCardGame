@@ -7,7 +7,8 @@
         v-for="card in cardStore.cards"
         :key="card.id"
         :card="card"
-        :displayedValues></Card>
+        :displayedValues
+        @useCard="emit('useCard', card)"></Card>
     </div>
   </div>
 </template>
@@ -25,7 +26,7 @@ const displayedValues = {
   useBttn: true,
 };
 
-
+const emit = defineEmits(['useCard']);
 </script>
 
 <style scoped lang="scss">

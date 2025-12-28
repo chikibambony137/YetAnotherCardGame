@@ -2,6 +2,7 @@ import { defineStore } from 'pinia';
 import { ref } from 'vue';
 
 export const useProfileStore = defineStore('profile', () => {
+    const maxCardsInDeck = 4;
 
     const user = ref({
         nickname: "Shmatko",
@@ -12,7 +13,12 @@ export const useProfileStore = defineStore('profile', () => {
         collectionCardsId: [0, 1, 2, 3, 4],
     });
 
+    const addCardToDeck = (cardId) => {
+        if (user.value.deckCardsId.length < maxCardsInDeck)
+            user.value.deckCardsId.push(cardId);
+    }
+
     return {
-        user,
+        user, addCardToDeck
     }
 })

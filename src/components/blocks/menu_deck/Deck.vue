@@ -10,6 +10,7 @@ import Table from "@/components/blocks/menu_deck/Table.vue";
 import { useProfileStore } from "../../../stores/useProfileStore";
 import { useCardStore } from "../../../stores/useCardStore";
 import { useCardsIdToObjects } from "../../../composables/UseCardsIdToObjects";
+import { ref, onMounted, watch } from "vue";
 
 const displayedValues = {
   title: true, info: true, removeBttn: true
@@ -19,8 +20,21 @@ const profileStore = useProfileStore();
 const user = profileStore.user;
 const cardStore = useCardStore();
 
-const deck = useCardsIdToObjects(user.deckCardsId, cardStore.cards)
+const deck = ref([])
 
+const updateDeck = () => {
+  deck.value = useCardsIdToObjects(user.deckCardsId, cardStore.cards);
+  console.log('deck is updated');
+}
+
+onMounted(() => {
+  updateDeck();
+})
+
+watch(user, () => {
+  
+  updateDeck();
+})
 </script>
 
 <style scoped lang="scss">
