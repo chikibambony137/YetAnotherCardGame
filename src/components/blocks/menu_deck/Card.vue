@@ -6,20 +6,23 @@
     </div>
 
     <div class="card__buttons" v-show="isChoosed">
-        <button class="card__bttn card__bttn_info">INFO</button>
-        <button class="card__bttn card__bttn_remove">REMOVE</button>
+        <h3 class="card__title" v-if="displayedValues.title">{{ card.name }}</h3>
+        <button class="card__bttn card__bttn_info" v-if="displayedValues.info">INFO</button>
+        <button class="card__bttn card__bttn_use" v-if="displayedValues.useBttn">USE</button>
+        <button class="card__bttn card__bttn_remove" v-if="displayedValues.removeBttn">REMOVE</button>
     </div>
 
   </div>
 </template>
 
 <script setup>
-import { ref, computed } from 'vue';
+import { ref } from 'vue';
 
 const isChoosed = ref(false);
 
-const { card } = defineProps({card: Object});
+const { card, displayedValues } = defineProps({card: Object, displayedValues: Object});
 const cardImgSrc = card.image;
+
 
 </script>
 
@@ -27,6 +30,8 @@ const cardImgSrc = card.image;
 @use '@/assets/scss/var.scss';
 
 .card {
+    position: relative;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -37,8 +42,9 @@ const cardImgSrc = card.image;
     height: 150px;
 
     box-sizing: border-box;
-    border-radius: 20px;
+    border-radius: 20px;;
     
+    transition: all 0.2s ease-in-out;
     background-color: transparent;
     z-index: 1;
 }
@@ -47,7 +53,15 @@ const cardImgSrc = card.image;
     display: block;
     height: min-content;
 
-    z-index: 2;
+    z-index: 10;
+
+    transform: scale(1.05);
+
+    /* Обводка поверх карты */
+    box-shadow: 
+        0 0 0 3px var.$button-color_choosed, /* Внутренняя обводка */
+        0 10px 25px rgba(0, 0, 0, 0.2); /* Тень для эффекта поднятия */
+
     box-sizing: border-box;
     background-color: var.$button-color_choosed;
 }
@@ -67,7 +81,13 @@ const cardImgSrc = card.image;
     width: 100%;
     height: 100%;
 
+    transition: transform 0.2s ease;
+
     border-radius: 20px;
+}
+
+.card_choosed .card__img {
+    transform: scale(1.02); /* Легкое увеличение изображения при выборе */
 }
 
 .card__buttons {
@@ -78,5 +98,13 @@ const cardImgSrc = card.image;
     gap: 10px;
 
     margin: 10px auto;
+    
+}
+
+.card__title {
+    margin: 0;
+    padding: 0;
+
+    color: var.$default-text-color;
 }
 </style>

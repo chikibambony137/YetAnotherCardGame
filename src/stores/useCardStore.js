@@ -46,6 +46,160 @@ export const useCardStore = defineStore('cards', () => {
                 shield: 50,
             }
         },
+
+        {
+            id: 4,
+            name: "Fireball",
+            info: "fire and ball - FIREBALL!!",
+            image: "card/Fireball.png",
+            features: {
+                cost: 3,
+                damage: 5,
+            }
+        },
+
+        {
+            id: 5,
+            name: "Fireball",
+            info: "fire and ball - FIREBALL!!",
+            image: "card/Fireball.png",
+            features: {
+                cost: 3,
+                damage: 5,
+            }
+        },
+
+        {
+            id: 6,
+            name: "Fireball",
+            info: "fire and ball - FIREBALL!!",
+            image: "card/Fireball.png",
+            features: {
+                cost: 3,
+                damage: 5,
+            }
+        },
+
+        {
+            id: 7,
+            name: "Fireball",
+            info: "fire and ball - FIREBALL!!",
+            image: "card/Fireball.png",
+            features: {
+                cost: 3,
+                damage: 5,
+            }
+        },
+
+        {
+            id: 8,
+            name: "Fireball",
+            info: "fire and ball - FIREBALL!!",
+            image: "card/Fireball.png",
+            features: {
+                cost: 3,
+                damage: 5,
+            }
+        },
+
+        {
+            id: 9,
+            name: "Fireball",
+            info: "fire and ball - FIREBALL!!",
+            image: "card/Fireball.png",
+            features: {
+                cost: 3,
+                damage: 5,
+            }
+        },
+
+        {
+            id: 10,
+            name: "Fireball",
+            info: "fire and ball - FIREBALL!!",
+            image: "card/Fireball.png",
+            features: {
+                cost: 3,
+                damage: 5,
+            }
+        },
+
+        {
+            id: 11,
+            name: "Fireball",
+            info: "fire and ball - FIREBALL!!",
+            image: "card/Fireball.png",
+            features: {
+                cost: 3,
+                damage: 5,
+            }
+        },
+
+        {
+            id: 12,
+            name: "Fireball",
+            info: "fire and ball - FIREBALL!!",
+            image: "card/Fireball.png",
+            features: {
+                cost: 3,
+                damage: 5,
+            }
+        },
+
+        {
+            id: 13,
+            name: "Fireball",
+            info: "fire and ball - FIREBALL!!",
+            image: "card/Fireball.png",
+            features: {
+                cost: 3,
+                damage: 5,
+            }
+        },
+
+        {
+            id: 14,
+            name: "Fireball",
+            info: "fire and ball - FIREBALL!!",
+            image: "card/Fireball.png",
+            features: {
+                cost: 3,
+                damage: 5,
+            }
+        },
+
+        {
+            id: 15,
+            name: "Fireball",
+            info: "fire and ball - FIREBALL!!",
+            image: "card/Fireball.png",
+            features: {
+                cost: 3,
+                damage: 5,
+            }
+        },
+
+        {
+            id: 16,
+            name: "Fireball",
+            info: "fire and ball - FIREBALL!!",
+            image: "card/Fireball.png",
+            features: {
+                cost: 3,
+                damage: 5,
+            }
+        },
+
+        {
+            id: 17,
+            name: "Fireball",
+            info: "fire and ball - FIREBALL!!",
+            image: "card/Fireball.png",
+            features: {
+                cost: 3,
+                damage: 5,
+            }
+        },
     ]);
 
     return {

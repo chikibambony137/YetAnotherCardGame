@@ -2,7 +2,9 @@
   <div class="collection">
     <h2 class="collection__title">Collection</h2>
     <div class="collection__table">
-      <Card class="deck__card" v-for="card in cardStore.cards" :key="card.id" :card="card"></Card>
+      <Card class="deck__card" 
+      v-for="card in cardStore.cards" :key="card.id" 
+      :card="card" :displayedValues></Card>
     </div>
   </div>
 </template>
@@ -13,6 +15,10 @@ import { useCardStore } from "../../../stores/useCardStore";
 import Card from "./Card.vue";
 
 const cardStore = useCardStore();
+
+const displayedValues = {
+  title: true, info: true, useBttn: true
+}
 </script>
 
 <style scoped lang="scss">
@@ -23,7 +29,9 @@ const cardStore = useCardStore();
   flex-direction: column;
   justify-content: center;
   gap: 10px;
+  flex-grow: 1;
 
+  user-select: none;
   width: 100%;
 }
 
@@ -38,7 +46,7 @@ const cardStore = useCardStore();
   display: flex;
 
   width: 100%;
-  height: min-content;
+  height: 100%;
 
   flex-wrap: wrap;
 
