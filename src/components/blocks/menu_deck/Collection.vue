@@ -2,23 +2,30 @@
   <div class="collection">
     <h2 class="collection__title">Collection</h2>
     <div class="collection__table">
-      <Card class="collection__card" 
-      v-for="card in cardStore.cards" :key="card.id" 
-      :card="card" :displayedValues></Card>
+      <Card
+        class="collection__card"
+        v-for="card in cardStore.cards"
+        :key="card.id"
+        :card="card"
+        :displayedValues></Card>
     </div>
   </div>
 </template>
 
 <script setup>
-import { useCardStore } from "../../../stores/useCardStore";
+import { useCardStore } from "@/stores/useCardStore";
 
 import Card from "./Card.vue";
 
 const cardStore = useCardStore();
 
 const displayedValues = {
-  title: true, info: true, useBttn: true
-}
+  title: true,
+  info: true,
+  useBttn: true,
+};
+
+
 </script>
 
 <style scoped lang="scss">

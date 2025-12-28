@@ -7,56 +7,20 @@
 
 <script setup>
 import Table from "@/components/blocks/menu_deck/Table.vue";
+import { useProfileStore } from "../../../stores/useProfileStore";
+import { useCardStore } from "../../../stores/useCardStore";
+import { useCardsIdToObjects } from "../../../composables/UseCardsIdToObjects";
 
 const displayedValues = {
   title: true, info: true, removeBttn: true
 }
 
-const deck = [
-  {
-    id: 0,
-    name: "Fireball",
-    info: "fire and ball - FIREBALL!!",
-    image: "card/Fireball.png",
-    features: {
-      cost: 3,
-      damage: 5,
-    },
-  },
+const profileStore = useProfileStore();
+const user = profileStore.user;
+const cardStore = useCardStore();
 
-  {
-    id: 1,
-    name: "Heal",
-    info: "heal my ebalo",
-    image: "card/Heal.png",
-    features: {
-      cost: 2,
-      heal: 3,
-    },
-  },
+const deck = useCardsIdToObjects(user.deckCardsId, cardStore.cards)
 
-  {
-    id: 2,
-    name: "Lightning",
-    info: "Power off!",
-    image: "card/Lightning.png",
-    features: {
-      cost: 7,
-      damage: 10,
-    },
-  },
-
-  {
-    id: 3,
-    name: "Shield",
-    info: "Shield for ass, use correctly!",
-    image: "card/Shield.png",
-    features: {
-      cost: 5,
-      shield: 50,
-    },
-  },
-];
 </script>
 
 <style scoped lang="scss">

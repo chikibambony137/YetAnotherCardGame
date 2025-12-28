@@ -2,12 +2,15 @@ import { defineStore } from 'pinia';
 import { ref } from 'vue';
 
 export const useCardStore = defineStore('cards', () => {
+
+    const lockedCardImg = "content/card/Locked.jpg";
+
     const cards = ref([
         {
             id: 0,
             name: "Fireball",
             info: "fire and ball - FIREBALL!!",
-            image: "card/Fireball.png",
+            image: "content/card/Fireball.png",
             features: {
                 cost: 3,
                 damage: 5,
@@ -18,7 +21,7 @@ export const useCardStore = defineStore('cards', () => {
             id: 1,
             name: "Heal",
             info: "heal my ebalo",
-            image: "card/Heal.png",
+            image: "content/card/Heal.png",
             features: {
                 cost: 2,
                 heal: 3,
@@ -29,7 +32,7 @@ export const useCardStore = defineStore('cards', () => {
             id: 2,
             name: "Lightning",
             info: "Power off!",
-            image: "card/Lightning.png",
+            image: "content/card/Lightning.png",
             features: {
                 cost: 7,
                 damage: 10,
@@ -40,7 +43,7 @@ export const useCardStore = defineStore('cards', () => {
             id: 3,
             name: "Shield",
             info: "Shield for ass, use correctly!",
-            image: "card/Shield.png",
+            image: "content/card/Shield.png",
             features: {
                 cost: 5,
                 shield: 50,
@@ -51,7 +54,7 @@ export const useCardStore = defineStore('cards', () => {
             id: 4,
             name: "Fireball",
             info: "fire and ball - FIREBALL!!",
-            image: "card/Fireball.png",
+            image: "content/card/Fireball.png",
             features: {
                 cost: 3,
                 damage: 5,
@@ -62,7 +65,7 @@ export const useCardStore = defineStore('cards', () => {
             id: 5,
             name: "Fireball",
             info: "fire and ball - FIREBALL!!",
-            image: "card/Fireball.png",
+            image: "content/card/Fireball.png",
             features: {
                 cost: 3,
                 damage: 5,
@@ -73,7 +76,7 @@ export const useCardStore = defineStore('cards', () => {
             id: 6,
             name: "Fireball",
             info: "fire and ball - FIREBALL!!",
-            image: "card/Fireball.png",
+            image: "content/card/Fireball.png",
             features: {
                 cost: 3,
                 damage: 5,
@@ -84,7 +87,7 @@ export const useCardStore = defineStore('cards', () => {
             id: 7,
             name: "Fireball",
             info: "fire and ball - FIREBALL!!",
-            image: "card/Fireball.png",
+            image: "content/card/Fireball.png",
             features: {
                 cost: 3,
                 damage: 5,
@@ -95,7 +98,7 @@ export const useCardStore = defineStore('cards', () => {
             id: 8,
             name: "Fireball",
             info: "fire and ball - FIREBALL!!",
-            image: "card/Fireball.png",
+            image: "content/card/Fireball.png",
             features: {
                 cost: 3,
                 damage: 5,
@@ -106,7 +109,7 @@ export const useCardStore = defineStore('cards', () => {
             id: 9,
             name: "Fireball",
             info: "fire and ball - FIREBALL!!",
-            image: "card/Fireball.png",
+            image: "content/card/Fireball.png",
             features: {
                 cost: 3,
                 damage: 5,
@@ -117,7 +120,7 @@ export const useCardStore = defineStore('cards', () => {
             id: 10,
             name: "Fireball",
             info: "fire and ball - FIREBALL!!",
-            image: "card/Fireball.png",
+            image: "content/card/Fireball.png",
             features: {
                 cost: 3,
                 damage: 5,
@@ -128,7 +131,7 @@ export const useCardStore = defineStore('cards', () => {
             id: 11,
             name: "Fireball",
             info: "fire and ball - FIREBALL!!",
-            image: "card/Fireball.png",
+            image: "content/card/Fireball.png",
             features: {
                 cost: 3,
                 damage: 5,
@@ -139,7 +142,7 @@ export const useCardStore = defineStore('cards', () => {
             id: 12,
             name: "Fireball",
             info: "fire and ball - FIREBALL!!",
-            image: "card/Fireball.png",
+            image: "content/card/Fireball.png",
             features: {
                 cost: 3,
                 damage: 5,
@@ -150,7 +153,7 @@ export const useCardStore = defineStore('cards', () => {
             id: 13,
             name: "Fireball",
             info: "fire and ball - FIREBALL!!",
-            image: "card/Fireball.png",
+            image: "content/card/Fireball.png",
             features: {
                 cost: 3,
                 damage: 5,
@@ -161,7 +164,7 @@ export const useCardStore = defineStore('cards', () => {
             id: 14,
             name: "Fireball",
             info: "fire and ball - FIREBALL!!",
-            image: "card/Fireball.png",
+            image: "content/card/Fireball.png",
             features: {
                 cost: 3,
                 damage: 5,
@@ -172,7 +175,7 @@ export const useCardStore = defineStore('cards', () => {
             id: 15,
             name: "Fireball",
             info: "fire and ball - FIREBALL!!",
-            image: "card/Fireball.png",
+            image: "content/card/Fireball.png",
             features: {
                 cost: 3,
                 damage: 5,
@@ -183,7 +186,7 @@ export const useCardStore = defineStore('cards', () => {
             id: 16,
             name: "Fireball",
             info: "fire and ball - FIREBALL!!",
-            image: "card/Fireball.png",
+            image: "content/card/Fireball.png",
             features: {
                 cost: 3,
                 damage: 5,
@@ -194,7 +197,7 @@ export const useCardStore = defineStore('cards', () => {
             id: 17,
             name: "Fireball",
             info: "fire and ball - FIREBALL!!",
-            image: "card/Fireball.png",
+            image: "content/card/Fireball.png",
             features: {
                 cost: 3,
                 damage: 5,
@@ -203,6 +206,6 @@ export const useCardStore = defineStore('cards', () => {
     ]);
 
     return {
-        cards,
+        cards, lockedCardImg
     }
 })
