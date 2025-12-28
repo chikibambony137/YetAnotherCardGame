@@ -1,14 +1,19 @@
 <template>
   <div class="player-info">
-    <p>Shmatko</p>
+    <p>{{ user.nickname }}</p>
     <p>~</p>
-    <p>Gold: 1000</p>
+    <p>Level {{ user.level }}</p>
     <p>~</p>
-    <p>Level 1</p>
+    <p>{{ user.gold }} Gold</p>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { useProfileStore } from '@/stores/useProfileStore';
+
+const profileStore = useProfileStore();
+const user = profileStore.user;
+</script>
 
 <style lang="scss" scoped>
 @use '@/assets/scss/var.scss';

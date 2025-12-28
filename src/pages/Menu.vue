@@ -55,6 +55,7 @@ import Nav from '@/components/blocks/menu/Nav.vue';
     max-height: 520px;
     border-radius: 20px;
 
+    overflow: hidden;
     background-color: var.$block-background-color;
 }
 
