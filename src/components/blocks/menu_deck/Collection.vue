@@ -2,7 +2,7 @@
   <div class="collection">
     <h2 class="collection__title">Collection</h2>
     <div class="collection__table">
-      <Card class="deck__card" 
+      <Card class="collection__card" 
       v-for="card in cardStore.cards" :key="card.id" 
       :card="card" :displayedValues></Card>
     </div>
