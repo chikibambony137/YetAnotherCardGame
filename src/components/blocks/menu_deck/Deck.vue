@@ -9,7 +9,6 @@
 import Table from "@/components/blocks/menu_deck/Table.vue";
 import { useProfileStore } from "../../../stores/useProfileStore";
 import { useCardStore } from "../../../stores/useCardStore";
-import { useCardsIdToObjects } from "../../../composables/UseCardsIdToObjects";
 import { ref, onMounted, watch } from "vue";
 
 const displayedValues = {
@@ -23,7 +22,7 @@ const cardStore = useCardStore();
 const deck = ref([])
 
 const updateDeck = () => {
-  deck.value = useCardsIdToObjects(user.deckCardsId, cardStore.cards);
+  deck.value = user.deckCards;
   console.log('deck is updated');
 }
 
@@ -32,7 +31,6 @@ onMounted(() => {
 })
 
 watch(user, () => {
-  
   updateDeck();
 })
 </script>
@@ -60,6 +58,7 @@ watch(user, () => {
   display: flex;
 
   width: 100%;
+  min-height: 150px;
   height: min-content;
 
   flex-wrap: wrap;

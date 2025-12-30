@@ -1,24 +1,20 @@
 <template>
   <div class="collection">
     <h2 class="collection__title">Collection</h2>
-    <div class="collection__table">
-      <Card
-        class="collection__card"
-        v-for="card in cardStore.cards"
-        :key="card.id"
-        :card="card"
-        :displayedValues
-        @useCard="emit('useCard', card)"></Card>
-    </div>
+    <Table class="collection__table" :cards="cardStore.cards" :displayedValues> </Table>
   </div>
 </template>
 
 <script setup>
+import { ref, watch } from "vue";
 import { useCardStore } from "@/stores/useCardStore";
 
-import Card from "./Card.vue";
+import Table from "@/components/blocks/menu_deck/Table.vue";
+import { useProfileStore } from "../../../stores/useProfileStore";
 
 const cardStore = useCardStore();
+const collection = ref(cardStore.cards);
+const profileStore = useProfileStore();
 
 const displayedValues = {
   title: true,
@@ -26,7 +22,6 @@ const displayedValues = {
   useBttn: true,
 };
 
-const emit = defineEmits(['useCard']);
 </script>
 
 <style scoped lang="scss">

@@ -6,7 +6,7 @@
     <div class="card__cover">
       <img
         class="card__img"
-        :src="getCardImgSrc()"
+        :src="card.image"
         :alt="card.name"
         draggable="false" />
     </div>
@@ -19,13 +19,13 @@
       <button
         class="card__bttn card__bttn_use"
         v-if="displayedValues.useBttn"
-        @click.prevent="useCard">
+        @click.prevent="addCardToDeck">
         USE
       </button>
       <button
         class="card__bttn card__bttn_remove"
         v-if="displayedValues.removeBttn"
-        @click.prevent="removeCard">
+        @click.prevent="removeCardFromDeck">
         REMOVE
       </button>
     </div>
@@ -48,26 +48,23 @@ const profileStore = useProfileStore();
 const user = profileStore.user;
 const cardStore = useCardStore();
 
-const isUnlocked = card.id in user.collectionCardsId ? true : false;
-
 const getCardImgSrc = () => {
-  if (isUnlocked) {
     return card.image;
-  } else return cardStore.lockedCardImg;
 };
 
 const chooseCard = () => {
-  if (isUnlocked) isChoosed.value = !isChoosed.value;
+  isChoosed.value = !isChoosed.value;
 };
 
-const useCard = () => {
+const addCardToDeck = () => {
+
   profileStore.addCardToDeck(card.id);
 };
 
-const removeCard = () => {
-    user.deckCardsId = user.deckCardsId.filter(cardId => cardId != card.id);
-    console.log(user.deckCardsId);
-}
+const removeCardFromDeck = () => {
+
+  profileStore.removeCardFromDeck(card.id);
+};
 </script>
 
 <style scoped lang="scss">

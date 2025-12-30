@@ -1,11 +1,11 @@
 import { defineStore } from 'pinia';
-import { ref } from 'vue';
+import { reactive, ref } from 'vue';
 
 export const useCardStore = defineStore('cards', () => {
 
     const lockedCardImg = "content/card/Locked.jpg";
 
-    const cards = ref([
+    const cards = reactive([
         {
             id: 0,
             name: "Fireball",

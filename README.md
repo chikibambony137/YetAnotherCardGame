@@ -1,5 +1,13 @@
-# Vue 3 + Vite
-
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
-
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+# Анализ проекта  
+## что пошло не так:  
+1. запутался в хранилищах (профиль, карты) - надо было функции, связанные с хранилищем, писать в соответствующих хранилищах,
+ а я почему-то пихал всё в компоненты  
+2. слишком много внимания уделял вёрстке вместо логики  
+3. куча скрытых ошибок из-за лени    
+4. нет адекватного разделения ответственности  
+  
+## на будущее:  
+1. получше изучить способы работы с хранилищем и стилистически правильное их написание  
+2. рассмотреть возможность использования готовых UI-библиотек по типу квазара и вьютифая  
+3. изучить TypeScript, чтобы было поменьше незамеченных ошибок и было проще ориентироваться в написанном  
+4. стараться не мешать всё в кучу, но и не перегружать проект бесконечными компонентами из компонентов
